@@ -1,0 +1,59 @@
+/* Main Container - Centers content with max-width */
+.food-display {
+  margin: 40px auto;
+  max-width: 1200px; /* Adjust to match your site's content width */
+  padding: 0 20px;
+}
+
+/* Title - Same stylish underline */
+.food-display h2 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.food-display h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: #e8c547;
+}
+
+/* Grid Layout - Original spacing with centered items */
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  justify-items: center; /* Centers items in their grid cells */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .food-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .food-display-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* Ensures all cards have equal height */
+.food-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
