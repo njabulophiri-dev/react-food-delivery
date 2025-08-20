@@ -604,7 +604,7 @@ export const food_list = [
     _id: "51",
     name: "Savanna Breeze",
     image:
-      "https://res.cloudinary.com/dae3qtnqt/image/upload/v1755463310/food_51_tknubl.png",
+      "https://res.cloudinary.com/dae3qtnqt/image/upload/v1755623559/food_51_iria5e.webp",
     price: 59,
     description:
       "A refreshing cocktail featuring green tea-flavored mead, baobab fruit juice, lime juice, honey syrup, and Angostura bitters, garnished with mint leaves.",
