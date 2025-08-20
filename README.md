@@ -23,15 +23,15 @@ Icons & Assets: Custom logo, favicons & curated images
 
 ### Homepage
 
-![Homepage](./Screenshots/homepage.png)
+![Homepage](./public/Screenshots/homepage.png)
 
 ### Product Page
 
-![Product Page](./Screenshots/product-page.png)
+![Product Page](./public/Screenshots/product-page.png)
 
 ### Checkout
 
-![Checkout](./Screenshots/checkout.png)
+![Checkout](./public/Screenshots/checkout.png)
 
 ⚙️ Installation & Setup
 
