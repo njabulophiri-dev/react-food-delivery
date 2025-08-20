@@ -27,7 +27,7 @@ Icons & Assets: Custom logo, favicons & curated images
 
 ### Product Page
 
-![Product Page](frontend/public/Screenshotsproduct-page.png)
+![Product Page](frontend/public/Screenshots/product-page.png)
 
 ### Checkout
 
