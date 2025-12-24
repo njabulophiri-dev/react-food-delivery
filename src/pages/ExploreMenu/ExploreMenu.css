@@ -1,0 +1,75 @@
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explore-menu h1 {
+  color: #262626;
+  font-weight: 500;
+}
+
+.explore-menu-text {
+  max-width: 60%;
+  color: #808080;
+}
+
+.explore-menu-list {
+  display: flex;
+  gap: 25px; /* consistent spacing */
+  align-items: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+  padding-bottom: 10px; /* Prevents scrollbar from cutting content */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures image + text are centered */
+  min-width: 80px; /* Prevents squeezing */
+}
+
+.explore-menu-list-item img {
+  width: 7.5vw;
+  min-width: 80px;
+  max-width: 120px; /* Limits image size on large screens */
+  height: auto; /* Ensures aspect ratio */
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: #747474;
+  font-size: max(1.4vw, 16px);
+  text-align: center; /* Ensures text is centered under image */
+  cursor: pointer;
+}
+
+.explore-menu hr {
+  margin: 10px 0px;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+.explore-menu-list-item .active {
+  border: 4px solid #e8c547;
+  padding: 2px;
+}
+
+@media (max-width: 1050px) {
+  .explore-menu-text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .explore-menu-list {
+    gap: 15px; /* Smaller gap on mobile */
+  }
+}
