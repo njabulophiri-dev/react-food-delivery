@@ -121,12 +121,12 @@ const ContactPage = () => {
               </div>
               <div className="info-content">
                 <a 
-                  href="https://oceanbasket.com" 
+                  href="https://njabulophiri.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="website-link"
                 >
-                  Visit Oceanbasket.com <span>↗</span>
+                  Visit thedonrestaurant.com <span>↗</span>
                 </a>
                 <div className="franchise-contacts">
                   <div className="franchise-contact">
