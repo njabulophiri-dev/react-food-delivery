@@ -78,7 +78,7 @@ const ContactPage = () => {
                 <h3>General or Business Enquiries</h3>
               </div>
               <div className="info-content">
-                <a href="tel:+27116551300" className="phone-link">+27 (0) 11 655 1300</a>
+                <a href="tel:+27765402126" className="phone-link">+27 76 540 2126</a>
                 <div className="hours">
                   <svg className="hours-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="12" cy="12" r="10"/>
@@ -98,7 +98,7 @@ const ContactPage = () => {
                 <h3>Customer Care</h3>
               </div>
               <div className="info-content">
-                <a href="tel:+27614236541" className="phone-link">+27 (0) 61 423 6541</a>
+                <a href="tel:+2765402126" className="phone-link">+27 76 540 2126</a>
                 <div className="hours">
                   <svg className="hours-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="12" cy="12" r="10"/>
