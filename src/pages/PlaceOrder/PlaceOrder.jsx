@@ -1,12 +1,29 @@
 import React, { useContext } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
+import { useNavigate } from "react-router-dom";
+
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount } = useContext(StoreContext);
+  const { getTotalCartAmount, getDeliveryFee, getFinalAmount} = useContext(StoreContext);
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+    if (getTotalCartAmount() === 0) {
+      navigate("/cart");
+      return;
+    }
+
+    navigate("/payment");
+};
+
+
+  
 
   return (
-    <form className="place-order">
+    <form className="place-order" onSubmit={handleSubmit}>
       <div className="place-order-left">
         <p className="title">Delivery Information</p>
         <div className="multi-fields">
@@ -14,14 +31,14 @@ const PlaceOrder = () => {
           <input type="text" placeholder="Last name" />
         </div>
         <input type="email" placeholder="Email address" />
-        <input type="text" placeholder="Street" />
+        <input type="text" placeholder="Street address" />
         <div className="multi-fields">
           <input type="text" placeholder="City" />
-          <input type="text" placeholder="Region" />
+          <input type="text" placeholder="Suburb" />
         </div>
         <div className="multi-fields">
-          <input type="text" placeholder="Zip code" />
-          <input type="text" placeholder="Country" />
+          <input type="text" placeholder="Postal code" />
+          <input type="text" placeholder="Province" />
         </div>
         <input type="text" placeholder="Phone" />
       </div>
@@ -36,17 +53,18 @@ const PlaceOrder = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>R {getTotalCartAmount() === 0 ? 0 : 2}</p>
+              <p>R {getDeliveryFee()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>
-                R {getTotalCartAmount() == 0 ? 0 : getTotalCartAmount() + 2}
-              </b>
+              <b>R {getFinalAmount()} </b>
             </div>
           </div>
-          <button>PROCEED TO PAYMENT</button>
+          <button type="submit" disabled={getTotalCartAmount() === 0}>
+            PROCEED TO PAYMENT
+          </button>
+
         </div>
       </div>
     </form>

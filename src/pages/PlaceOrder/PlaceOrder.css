@@ -39,3 +39,8 @@
 .place-order .cart-total button{
   margin-top: 30px;
 }
+
+.place-order button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

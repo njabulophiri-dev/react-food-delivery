@@ -9,7 +9,8 @@ import LoginPopup from "./components/LoginPopup/LoginPopup";
 import AppDownload from "./pages/AppDownload/AppDownload";
 import ContactPage from "./pages/ContactUs/ContactPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
-
+import Payment from "./pages/Payment/Payment";
+import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
 
 const App = () => {
 
@@ -26,6 +27,8 @@ const App = () => {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/download" element={<AppDownload />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
         </Routes>
       </div>
       <Footer />

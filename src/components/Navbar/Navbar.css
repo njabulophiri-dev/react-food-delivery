@@ -108,3 +108,157 @@
   }
 }
 
+/* Hamburger button */
+.hamburger {
+  display: none;
+  width: 28px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hamburger lines */
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #49557e;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Animate to X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+/* Mobile only */
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+/* Hide desktop login on mobile */
+@media (max-width: 750px) {
+  .desktop-login {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Mobile menu popup (mirrors LoginPopup) */
+.mobile-menu-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  display: grid;
+}
+
+.mobile-menu-card {
+  place-self: center;
+  width: max(23vw, 300px);
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: fadeIn 0.5s;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-header img {
+  width: 16px;
+  cursor: pointer;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu-links a {
+  color: #49557e;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.mobile-login-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e8c547;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Mobile dropdown menu */
+.mobile-dropdown {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+  animation: fadeIn 0.3s;
+}
+
+.mobile-dropdown a {
+  text-decoration: none;
+  color: #49557e;
+  font-size: 16px;
+}
+
+.mobile-dropdown-login {
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e8c547;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}

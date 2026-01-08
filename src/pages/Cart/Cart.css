@@ -63,6 +63,11 @@
   cursor: pointer;
 }
 
+.cart-checkout-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .cart-promocode{
   flex: 1;
 }

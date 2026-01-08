@@ -1,10 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
+import { useCallback } from "react";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  const deliveryFee = 70;
+
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -30,6 +33,19 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
+  const getDeliveryFee = () => {
+    return getTotalCartAmount() === 0 ? 0 : deliveryFee;
+  };
+
+  const getFinalAmount = () => {
+    return getTotalCartAmount() + getDeliveryFee();
+  };
+
+  const clearCart = useCallback(() => {
+    setCartItems({});
+  }, []);
+
+
   const contextValue = {
     food_list,
     cartItems,
@@ -37,7 +53,11 @@ const StoreContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    getDeliveryFee,
+    getFinalAmount,
+    clearCart
   };
+
   return (
     <StoreContext.Provider value={contextValue}>
       {props.children}

@@ -1,0 +1,57 @@
+.order-success {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-success-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #e8c547;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-success h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.order-success p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.success-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #e8c547;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.redirect-note {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
