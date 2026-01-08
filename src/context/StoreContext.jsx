@@ -5,8 +5,17 @@ import { useCallback } from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState({});
+
   const deliveryFee = 70;
+
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem("cartItems");
+    return storedCart ? JSON.parse(storedCart) : {};
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
 
   const addToCart = (itemId) => {
@@ -41,9 +50,10 @@ const StoreContextProvider = (props) => {
     return getTotalCartAmount() + getDeliveryFee();
   };
 
-  const clearCart = useCallback(() => {
+  const clearCart = () => {
     setCartItems({});
-  }, []);
+    localStorage.removeItem("cartItems");
+  };
 
 
   const contextValue = {
