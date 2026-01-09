@@ -50,6 +50,8 @@ const StoreContextProvider = (props) => {
     return getTotalCartAmount() + getDeliveryFee();
   };
 
+  // Persist cart across refreshes to simulate real user session behavior
+
   const clearCart = () => {
     setCartItems({});
     localStorage.removeItem("cartItems");
